@@ -31,12 +31,12 @@ export default class Home extends React.Component {
     }
     
     handleChange(event) {
-    const target = event.target;
-    const name = target.name;
+        const target = event.target;
+        const name = target.name;
 
-    this.setState({
-        [name]: target.value
-    });
+        this.setState({
+            [name]: target.value
+        });
     }
     
     openCreationModal() {
@@ -67,15 +67,15 @@ export default class Home extends React.Component {
                     <form onSubmit={this.createPost}>
                         <label>
                         Titre:
-                        <input type="text" name="postName" value={this.state.postName} onChange={this.handleChange} />
+                        <input type="text" name="postName" value={this.state.postName} onChange={(e) => this.handleChange(e)} />
                         </label>
                         <label>
                         Description:
-                        <input type="text" name="postDesc" value={this.state.postDesc} onChange={this.handleChange} />
+                        <input type="text" name="postDesc" value={this.state.postDesc} onChange={(e) => this.handleChange(e)} />
                         </label>
                         <label>
                         Message:
-                        <input type="text" name="postContent" value={this.state.postContent} onChange={this.handleChange} />
+                        <input type="text" name="postContent" value={this.state.postContent} onChange={(e) => this.handleChange(e)} />
                         </label>
                         <button type="submit">Submit</button>
                     </form>
